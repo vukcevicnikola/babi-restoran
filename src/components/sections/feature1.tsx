@@ -8,13 +8,13 @@ export const Feature1 = () => {
           {/* Text Content */}
           <div className="space-y-6">
             <div className="space-y-2">
-              <h2 className="font-playfair text-3xl font-semibold tracking-tight text-white md:text-5xl">
+              <h2 className="font-playfair text-4xl font-semibold tracking-tight text-white md:text-5xl">
                 About Us
               </h2>
               <div className="bg-secondary h-0.5 w-20"></div>
             </div>
             <div className="space-y-4 text-white/90">
-              <p className="text-base leading-snug">
+              <p className="text-lg leading-snug">
                 At Babi Gourmet & Wine, we believe in creating experiences, not
                 just meals. Born out of a love for fine food and exceptional
                 wine, we bring together the best of culinary artistry and wine
@@ -26,7 +26,7 @@ export const Feature1 = () => {
           </div>
 
           {/* Image */}
-          <div className="relative">
+          <div className="relative hidden md:block">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
               <Image
                 src="/images/locations/babi-one.webp"

@@ -76,7 +76,7 @@ const Navbar = () => {
 
   return (
     <header
-      className="fixed top-0 right-0 left-0 z-50"
+      className="absolute top-0 right-0 left-0 z-50"
       style={{ borderBottom: 'none !important', border: 'none !important' }}
     >
       <div
@@ -94,7 +94,7 @@ const Navbar = () => {
               alt="Restaurant Logo"
               width={200}
               height={80}
-              className="h-12 w-auto md:h-14"
+              className="h-14 w-auto md:h-16"
               priority
             />
           </Link>

@@ -10,13 +10,11 @@ import { cn } from '@/lib/utils';
 
 const SLIDES = [
   {
-    image:
-      'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3',
+    image: '/images/locations/hero.jpg',
     label: 'Signature Dishes',
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3',
+    image: '/images/locations/hero-one.jpg',
     label: 'Our Kitchen',
   },
 ];

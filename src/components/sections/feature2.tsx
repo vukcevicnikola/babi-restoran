@@ -59,7 +59,7 @@ export const Feature2 = () => {
           {LOCATIONS.map((location) => (
             <Card
               key={location.city}
-              className="group ring-secondary/30 relative overflow-hidden border-none bg-transparent ring-1 shadow-none"
+              className="group relative overflow-hidden border-none bg-transparent ring-1 shadow-none"
             >
               <CardContent className="p-0">
                 <div className="relative aspect-[1/1] overflow-hidden md:aspect-[1/1]">
