@@ -43,7 +43,7 @@ const Hero = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative min-h-[80vh] w-full overflow-hidden md:h-screen">
       {/* Embla Carousel */}
       <div className="relative h-full w-full">
         {/* Dark overlay for better readability */}

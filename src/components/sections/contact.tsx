@@ -30,13 +30,6 @@ const formFields = [
     optional: true,
   },
   {
-    label: 'Number of employees',
-    name: 'employees',
-    placeholder: 'Company name',
-    type: 'text',
-    optional: true,
-  },
-  {
     label: 'Your message',
     name: 'message',
     placeholder: 'Write your message',
@@ -46,46 +39,34 @@ const formFields = [
 
 export default function Contact() {
   return (
-    <section className="py-16 md:py-28 lg:py-32">
-      <div className="container max-w-4xl">
-        <h1 className="text-center text-4xl font-semibold tracking-tight sm:text-5xl">
+    <section className="font-playfair py-32 lg:py-32">
+      <div className="container max-w-4xl text-white/80">
+        <h1 className="text-left text-4xl font-semibold tracking-tight text-white/80 sm:text-5xl">
           Contact us
         </h1>
-        <p className="text-muted-foreground mt-4 text-center">
+        {/* <p className="text-muted-foreground mt-4 text-left">
           Hopefully this form gets through our spam filters.
-        </p>
+        </p> */}
 
         <div className="mt-8 flex max-md:flex-col md:mt-12 md:divide-x lg:mt-20">
           {/* Contact Information */}
           <div className="space-y-10 md:pe-14">
             <div>
-              <h2 className="text-lg font-semibold">Corporate office</h2>
-              <p className="text-muted-foreground mt-3 text-lg font-medium tracking-tight">
-                1 Carlsberg Close
-                <br />
-                1260 Hillview, Australia
+              <h2 className="text-xl font-semibold">Address</h2>
+              <p className="text-muted-foreground mt-2 text-lg font-medium tracking-tight">
+                The Capital Plaza - Podgorica
               </p>
             </div>
 
             <div>
-              <h2 className="text-lg font-semibold">Email us</h2>
-              <div className="mt-3 space-y-2">
+              <h2 className="text-xl font-semibold">Email us</h2>
+              <div className="mt-2 space-y-2">
                 <div>
-                  <p>Careers</p>
                   <Link
                     href="mailto:careers@streamline.com"
-                    className="text-muted-foreground mt-3 text-lg font-medium tracking-tight"
+                    className="mt-3 text-base font-medium tracking-tight text-white"
                   >
-                    careers@streamline.com
-                  </Link>
-                </div>
-                <div>
-                  <p>Press</p>
-                  <Link
-                    href="mailto:press@streamline.com"
-                    className="text-muted-foreground mt-3 text-lg font-medium tracking-tight"
-                  >
-                    press@streamline.com
+                    info@babi.me
                   </Link>
                 </div>
               </div>
@@ -117,7 +98,7 @@ export default function Contact() {
           </div>
 
           {/* Inquiry Form */}
-          <div className="flex-1 md:ps-8">
+          <div className="mt-16 flex-1 md:mt-0 md:ps-8">
             <h2 className="text-lg font-semibold">Inquiries</h2>
             <form className="mt-5 space-y-5">
               {formFields.map((field) => (

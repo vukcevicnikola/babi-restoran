@@ -67,13 +67,6 @@ const Navbar = () => {
     { label: 'Contact', href: '/contact' },
   ];
 
-  const bgGradient =
-    pathname === '/about'
-      ? 'bg-sand-200'
-      : ['/', '/faq', '/signup', '/login'].includes(pathname)
-        ? 'bg-sand-200'
-        : 'bg-gradient-to-b from-sand-200 to-background';
-
   return (
     <header
       className="absolute top-0 right-0 left-0 z-50"
@@ -153,11 +146,11 @@ const Navbar = () => {
           <div className="flex items-center gap-2.5">
             {/* Hamburger Menu Button (Mobile Only) */}
             <button
-              className="relative flex size-8 text-white drop-shadow-lg lg:hidden"
+              className="relative flex size-10 text-white drop-shadow-lg lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>
-              <div className="absolute top-1/2 left-1/2 block w-[18px] -translate-x-1/2 -translate-y-1/2">
+              <div className="absolute top-1/2 left-1/2 block w-[22px] -translate-x-1/2 -translate-y-1/2">
                 <span
                   aria-hidden="true"
                   className={`absolute block h-0.5 w-full rounded-full bg-current transition duration-500 ease-in-out ${isMenuOpen ? 'rotate-45' : '-translate-y-1.5'}`}
@@ -179,11 +172,10 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          'absolute inset-0 top-full container flex h-[calc(100vh-64px)] flex-col items-end text-right transition-all duration-300 ease-in-out lg:hidden',
+          'bg-background absolute inset-0 top-full container flex h-[calc(100vh-64px)] flex-col items-end text-right transition-all duration-300 ease-in-out lg:hidden',
           isMenuOpen
             ? 'visible translate-x-0 opacity-100'
             : 'invisible translate-x-full opacity-0',
-          bgGradient,
         )}
       >
         <div className="mt-8 flex w-full justify-end">
