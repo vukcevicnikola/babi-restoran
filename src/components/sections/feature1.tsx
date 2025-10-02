@@ -1,5 +1,9 @@
 import Image from 'next/image';
 
+import { ArrowRight } from 'lucide-react';
+
+import { Button } from '@/components/ui/button';
+
 export const Feature1 = () => {
   return (
     <section id="about" className="font-playfair py-16 md:py-24">
@@ -22,6 +26,15 @@ export const Feature1 = () => {
                 lunch, an elegant dinner, or a special celebration, our goal is
                 to delight your senses and make you feel at home.
               </p>
+            </div>
+            <div>
+              <Button
+                size="lg"
+                className="bg-primary font-playfair text-lg font-bold text-white/80"
+              >
+                Book your table
+                <ArrowRight />
+              </Button>
             </div>
           </div>
 

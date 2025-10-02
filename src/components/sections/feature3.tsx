@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import { PhoneForwarded } from 'lucide-react';
+
 import { Button } from '@/components/ui/button';
 
 export const Feature3 = () => {
@@ -31,6 +33,7 @@ export const Feature3 = () => {
                   size="lg"
                   className="bg-primary font-playfair text-lg font-semibold text-white/80"
                 >
+                  <PhoneForwarded />
                   Contact Us
                 </Button>
               </div>
