@@ -45,17 +45,16 @@ const Hero = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative overflow-hidden px-4 md:mx-auto md:max-w-7xl">
-      {/* Gradient background area */}
-      <div className="h-2 w-full"></div>
-
+    <section className="relative h-screen w-full overflow-hidden">
       {/* Embla Carousel */}
-      <div className="border-secondary/20 relative w-full rounded-2xl border">
+      <div className="relative h-full w-full">
+        {/* Dark overlay for better readability */}
+        <div className="absolute inset-0 z-10 bg-black/30"></div>
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {SLIDES.map((slide, index) => (
               <div key={index} className="min-w-0 flex-[0_0_100%]">
-                <div className="relative h-[60vh] w-full overflow-hidden rounded-2xl md:h-[80vh] lg:h-[85vh]">
+                <div className="relative h-screen w-full overflow-hidden">
                   <Image
                     src={slide.image}
                     alt={`Restaurant ${slide.label.toLowerCase()} - fine dining experience`}
@@ -71,7 +70,7 @@ const Hero = () => {
         </div>
 
         {/* Navigation Dots */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 transform">
+        <div className="absolute bottom-8 left-1/2 z-30 -translate-x-1/2 transform">
           <div className="flex gap-2">
             {SLIDES.map((_, index) => (
               <button
@@ -82,10 +81,10 @@ const Hero = () => {
               >
                 <div
                   className={cn(
-                    'h-0.5 w-6 rounded-full transition-colors',
+                    'h-0.5 w-8 rounded-full transition-colors',
                     index === selectedIndex
-                      ? 'bg-white'
-                      : 'bg-white/40 hover:bg-white/60',
+                      ? 'bg-white shadow-lg'
+                      : 'bg-white/50 hover:bg-white/70',
                   )}
                 />
               </button>

@@ -76,7 +76,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={cn('relative z-50', bgGradient)}
+      className="fixed top-0 right-0 left-0 z-50"
       style={{ borderBottom: 'none !important', border: 'none !important' }}
     >
       <div
@@ -100,12 +100,12 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden items-center gap-8 lg:flex">
-            <NavigationMenuList>
+          <NavigationMenu className="ml-auto hidden items-center gap-8 lg:flex">
+            <NavigationMenuList className="text-white drop-shadow-lg">
               {ITEMS.map((link) =>
                 link.dropdownItems ? (
                   <NavigationMenuItem key={link.label}>
-                    <NavigationMenuTrigger className="bg-transparent font-normal lg:text-base">
+                    <NavigationMenuTrigger className="bg-transparent font-normal text-white drop-shadow-lg hover:text-white/80 lg:text-base">
                       {link.label}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -137,8 +137,8 @@ const Navbar = () => {
                     <Link
                       href={link.href}
                       className={cn(
-                        'p-2 lg:text-base',
-                        pathname === link.href && 'text-muted-foreground',
+                        'p-2 text-white drop-shadow-lg hover:text-white/80 lg:text-base',
+                        pathname === link.href && 'text-white/70',
                       )}
                     >
                       {link.label}
@@ -149,20 +149,11 @@ const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          {/* Auth Buttons */}
+          {/* Mobile Menu Button */}
           <div className="flex items-center gap-2.5">
-            <Link href="/signup" className="hidden lg:block">
-              <Button variant="ghost">Sign up</Button>
-            </Link>
-            <div
-              className={`transition-opacity duration-300 ${isMenuOpen ? 'max-lg:pointer-events-none max-lg:opacity-0' : 'opacity-100'}`}
-            >
-              {/* <ThemeToggle /> */}
-            </div>
-
             {/* Hamburger Menu Button (Mobile Only) */}
             <button
-              className="text-muted-foreground relative flex size-8 lg:hidden"
+              className="relative flex size-8 text-white drop-shadow-lg lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span className="sr-only">Open main menu</span>
@@ -188,28 +179,26 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          'absolute inset-0 top-full container flex h-[calc(100vh-64px)] flex-col transition-all duration-300 ease-in-out lg:hidden',
+          'absolute inset-0 top-full container flex h-[calc(100vh-64px)] flex-col items-end text-right transition-all duration-300 ease-in-out lg:hidden',
           isMenuOpen
             ? 'visible translate-x-0 opacity-100'
             : 'invisible translate-x-full opacity-0',
           bgGradient,
         )}
       >
-        <div className="mt-8 space-y-2">
+        <div className="mt-8 flex w-full justify-end">
           <Link
             href="/signup"
             className="block"
             onClick={() => setIsMenuOpen(false)}
           >
-            <Button size="sm" className="w-full">
-              Sign up
-            </Button>
+            <Button size="sm">Sign up</Button>
           </Link>
         </div>
-        <nav className="mt-3 flex flex-1 flex-col gap-6">
+        <nav className="mt-3 flex flex-1 flex-col items-end gap-6 text-right">
           {ITEMS.map((link) =>
             link.dropdownItems ? (
-              <div key={link.label} className="">
+              <div key={link.label} className="w-full">
                 <button
                   onClick={() =>
                     setOpenDropdown(
@@ -241,7 +230,7 @@ const Navbar = () => {
                     <Link
                       key={item.title}
                       href={item.href}
-                      className="hover:bg-accent flex items-start gap-3 rounded-md p-2"
+                      className="hover:bg-accent flex flex-col items-end gap-1 rounded-md p-2"
                       onClick={() => {
                         setIsMenuOpen(false);
                         setOpenDropdown(null);

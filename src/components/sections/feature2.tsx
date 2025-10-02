@@ -48,7 +48,7 @@ export const Feature2 = () => {
   return (
     <section id="locations" className="py-16 md:py-24">
       <div className="max-w-9xl container">
-        <div className="mb-12 text-left md:mb-16">
+        <div className="mb-8 text-left md:mb-16">
           <h2 className="font-playfair mb-4 text-4xl font-semibold tracking-tight text-white md:text-5xl">
             Our Locations
           </h2>

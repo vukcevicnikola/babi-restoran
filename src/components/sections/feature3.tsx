@@ -9,7 +9,7 @@ export const Feature3 = () => {
         <div className="ring-secondary/30 overflow-hidden rounded-2xl ring-1 shadow-lg">
           <div className="grid lg:grid-cols-2">
             {/* Left Content */}
-            <div className="px-8 py-16 md:px-16 md:py-20">
+            <div className="px-4 py-12 md:px-16 md:py-20">
               <div className="mb-6">
                 <p className="text-sm font-medium tracking-wider text-white/80 uppercase">
                   Ready for an exceptional experience?
@@ -20,7 +20,7 @@ export const Feature3 = () => {
                 Reserve your table today.
               </h2>
 
-              <p className="mb-8 text-lg leading-relaxed text-white/80">
+              <p className="mb-8 text-lg leading-snug text-white/80">
                 Experience the finest cuisine in an elegant atmosphere. Book
                 your table now and let us create an unforgettable dining
                 experience for you.
