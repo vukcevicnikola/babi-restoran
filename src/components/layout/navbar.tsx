@@ -69,10 +69,10 @@ const Navbar = () => {
 
   const bgGradient =
     pathname === '/about'
-      ? 'bg-sand-100'
+      ? 'bg-sand-200'
       : ['/', '/faq', '/signup', '/login'].includes(pathname)
-        ? 'bg-sand-100'
-        : 'bg-gradient-to-b from-sand-100 to-background';
+        ? 'bg-sand-200'
+        : 'bg-gradient-to-b from-sand-200 to-background';
 
   return (
     <header

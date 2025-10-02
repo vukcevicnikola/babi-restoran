@@ -45,18 +45,12 @@ const Hero = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section
-      className="relative overflow-hidden px-4 md:mx-auto md:max-w-7xl"
-      style={{
-        background:
-          'linear-gradient(to bottom, hsl(var(--sand-100)) 0%, hsl(var(--sand-100)) 5%, transparent 15%)',
-      }}
-    >
+    <section className="relative overflow-hidden px-4 md:mx-auto md:max-w-7xl">
       {/* Gradient background area */}
       <div className="h-2 w-full"></div>
 
       {/* Embla Carousel */}
-      <div className="relative w-full">
+      <div className="border-secondary/20 relative w-full rounded-2xl border">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {SLIDES.map((slide, index) => (
@@ -70,9 +64,6 @@ const Hero = () => {
                     priority={index === 0}
                     sizes="100vw"
                   />
-
-                  {/* Dark Overlay */}
-                  <div className="absolute inset-0 bg-black/20"></div>
                 </div>
               </div>
             ))}
